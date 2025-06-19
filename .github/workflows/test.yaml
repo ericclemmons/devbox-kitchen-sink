@@ -10,12 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # Faster nix installation
       - uses: cachix/install-nix-action@v31
+      # Install devbox using cached nix & devbox.lock cache
       - uses: jetify-com/devbox-install-action@v0.12.0
         with:
           devbox-version: 0.14.2
           enable-cache: true
           skip-nix-installation: true
+      # Cache pnpm store
+      - id: pnpm-cache
+        shell: bash
+        run: echo "dir=$(devbox run --quiet pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ${{ steps.pnpm-cache.outputs.dir }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
       - name: ${{ matrix.script }}
         run: devbox run turbo ${{ matrix.script }}
     strategy:
