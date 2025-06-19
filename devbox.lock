@@ -134,6 +134,54 @@
           "store_path": "/nix/store/wnayblhh0555nwfccnzcqkzph52y4yby-nodejs-24.1.0"
         }
       }
+    },
+    "turbo@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#turbo",
+      "source": "devbox-search",
+      "version": "2.5.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/c6r49ngx5w37ls0243arra10963kv7qr-turbo-2.5.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/c6r49ngx5w37ls0243arra10963kv7qr-turbo-2.5.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yxjzrlky28lsskvagkcpgqkz31v6gqm4-turbo-2.5.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/yxjzrlky28lsskvagkcpgqkz31v6gqm4-turbo-2.5.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/z2vjfn5x7lrc522yyljval0chj9df1js-turbo-2.5.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/z2vjfn5x7lrc522yyljval0chj9df1js-turbo-2.5.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v5k8xlsrsjgkal3prjdqkdfiv4fyr9v7-turbo-2.5.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v5k8xlsrsjgkal3prjdqkdfiv4fyr9v7-turbo-2.5.3"
+        }
+      }
     }
   }
 }
