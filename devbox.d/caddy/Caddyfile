@@ -1,15 +1,16 @@
-# See https://caddyserver.com/docs/caddyfile for more details
-{
-	admin 0.0.0.0:2020
-	auto_https disable_certs
-	http_port 8800
-	https_port 4443
+# https://www.jetify.com/docs/devbox/devbox_examples/servers/caddy/
+admin.my.localhost {
+	reverse_proxy :3001
 }
 
-:8082 {
-	root * {$CADDY_ROOT_DIR}
-	log {
-		output file {$CADDY_LOG_DIR}/caddy.log
-	}
-	file_server
+api.my.localhost {
+	reverse_proxy :5001
+}
+
+blog.my.localhost {
+	reverse_proxy :5173
+}
+
+storefront.my.localhost {
+	reverse_proxy :3002
 }
