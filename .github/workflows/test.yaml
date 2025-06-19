@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v31
       - uses: jetify-com/devbox-install-action@v0.12.0
         with:
-          disable-nix-access-token: true
           devbox-version: 0.14.2
           enable-cache: true
+          skip-nix-installation: true
       - name: ${{ matrix.script }}
         run: devbox run turbo ${{ matrix.script }}
     strategy:
