@@ -14,6 +14,7 @@ jobs:
         with:
           devbox-version: 0.14.2
           enable-cache: true
+          skip-nix-installation: true
       - name: ${{ matrix.script }}
         run: devbox run turbo ${{ matrix.script }}
     strategy:
