@@ -11,7 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: cachix/install-nix-action@v31
-      - uses: pnpm/action-setup@v4
       - uses: jetify-com/devbox-install-action@v0.12.0
         with:
           devbox-version: 0.14.2
@@ -19,6 +18,7 @@ jobs:
           skip-nix-installation: true
       - name: ${{ matrix.script }}
         run: devbox run turbo ${{ matrix.script }}
+      - run: devbox run --quiet pnpm store path
     strategy:
       matrix:
         script: ["check-types", "lint", "test"]
