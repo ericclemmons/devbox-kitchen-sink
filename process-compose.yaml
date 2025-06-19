@@ -1,0 +1,32 @@
+# https://www.jetify.com/docs/devbox/guides/services/#defining-your-own-services
+processes:
+  logger:
+    command: "pnpm dev"
+    namespace: "packages"
+    working_dir: "packages/logger"
+    ready_log_line: "Built"
+  ui:
+    command: "pnpm dev"
+    namespace: "packages"
+    working_dir: "packages/ui"
+    ready_log_line: "Built"
+  api:
+    command: "pnpm dev"
+    namespace: "apps"
+    working_dir: "apps/api"
+    ready_log_line: "running"
+  admin:
+    command: "pnpm dev"
+    namespace: "apps"
+    working_dir: "apps/admin"
+    ready_log_line: "localhost"
+  blog:
+    command: "pnpm dev"
+    namespace: "apps"
+    working_dir: "apps/blog"
+    ready_log_line: "localhost"
+  storefront:
+    command: "pnpm dev"
+    namespace: "apps"
+    working_dir: "apps/storefront"
+    ready_log_line: "Ready"
