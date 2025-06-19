@@ -8,8 +8,7 @@
       "all": ["devbox services up -- \"$@\""],
       "api": ["devbox services up api"],
       "blog": ["devbox services up blog"],
-      "storefront": ["devbox services up storefront"],
-      "test": ["turbo run test"]
+      "storefront": ["devbox services up storefront"]
     }
   }
 }

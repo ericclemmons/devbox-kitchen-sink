@@ -11,7 +11,7 @@ jobs:
         with:
           enable-cache: true
       - name: ${{ matrix.script }}
-        run: devbox run ${{ matrix.script }}
+        run: devbox run turbo ${{ matrix.script }}
     strategy:
       matrix:
         script: ["check-types", "lint", "test"]
