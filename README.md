@@ -1,3 +1,33 @@
+# Devbox + Turborepo Kitchen-Sink Starter
+
+[![Built with Devbox](https://www.jetify.com/img/devbox/shield_galaxy.svg)](https://www.jetify.com/devbox/docs/contributor-quickstart/)
+
+> This is a port of [vercel/turborepo/examples/kitchen-sink](https://github.com/vercel/turborepo/tree/main/examples/kitchen-sink)
+> to [Devbox](https://www.jetify.com/devbox).
+
+## Why?
+
+_See [Why Use Devbox?](https://www.jetify.com/docs/devbox/#why-use-devbox)_
+
+- 1 command to run the project
+  - `devbox run all`
+- 1 command to access the env
+  - `devbox shell`
+- Import `.env` into the environment
+  - ❌ Replaces [dotenv](https://github.com/motdotla/dotenv)
+- TUI for service management & visibility, powered by [process-compose](https://github.com/F1bonacc1/process-compose)
+  - ❌ Replaces [concurrently](https://github.com/open-cli-tools/concurrently) & turborepo's TUI
+- Shared, project-specific shell for all contributors
+  - 🙅‍♂️ No more fighting `$PATH`
+- Isolate project dependencies from other projects
+  - ❌ Replaces [n](https://github.com/tj/n), [nvm](https://github.com/nvm-sh/nvm), conflicting package managers, etc.
+- Unlike Docker, no slowness from virtualization
+  - ⚠️ So you still need to use different ports for apps (e.g. `:3000`, `:3001`)
+- Re-use of the same environment in CI
+  - If `devbox run lint` works locally, it works in CI 💪
+
+---
+
 # Turborepo kitchen sink starter
 
 This Turborepo starter is maintained by the Turborepo core team.
