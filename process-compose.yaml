@@ -5,7 +5,7 @@ processes:
       caddy:
       logger:
     command: "pnpm dev"
-    namespace: "apps"
+    namespace: "https://api.my.localhost"
     working_dir: "apps/api"
     ready_log_line: "running"
 
@@ -14,7 +14,7 @@ processes:
       caddy:
       ui:
     command: "pnpm dev"
-    namespace: "apps"
+    namespace: "https://admin.my.localhost"
     working_dir: "apps/admin"
     ready_log_line: "localhost"
 
@@ -23,7 +23,7 @@ processes:
       caddy:
       ui:
     command: "pnpm dev"
-    namespace: "apps"
+    namespace: "https://blog.my.localhost"
     working_dir: "apps/blog"
     ready_log_line: "localhost"
 
@@ -41,7 +41,7 @@ processes:
       logger:
       ui:
     command: "pnpm dev"
-    namespace: "apps"
+    namespace: "https://storefront.my.localhost"
     working_dir: "apps/storefront"
     ready_log_line: "Ready"
 
