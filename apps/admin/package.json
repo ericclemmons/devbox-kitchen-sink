@@ -11,17 +11,17 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.5.1",
-    "eslint": "^9.29.0",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
     "typescript": "5.8.2",
-    "vite": "^5.4.14"
+    "vite": "catalog:"
   }
 }
