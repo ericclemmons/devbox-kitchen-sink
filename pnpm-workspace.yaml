@@ -3,6 +3,9 @@ packages:
   - packages/*
 
 onlyBuiltDependencies:
-  - '@swc/core'
+  - "@swc/core"
   - esbuild
   - sharp
+
+catalogMode: prefer
+saveCatalog: true
